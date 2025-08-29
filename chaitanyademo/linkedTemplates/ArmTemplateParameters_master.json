@@ -5,6 +5,9 @@
 		"factoryName": {
 			"value": "chaitanyademo"
 		},
+		"AzureBlobStorage3_connectionString": {
+			"value": ""
+		},
 		"containerUri": {
 			"value": ""
 		},
