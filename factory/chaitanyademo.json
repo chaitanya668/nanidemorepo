@@ -1,0 +1,9 @@
+{
+	"name": "chaitanyademo",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "b557e4c3-e5f5-4c8e-a7fd-449c764b4e6f",
+		"tenantId": "ee8aaf24-bff8-4f59-a24a-362856f8d47b"
+	}
+}
