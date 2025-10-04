@@ -1,8 +1,8 @@
 {
-	"name": "empdataset",
+	"name": "depdataset",
 	"properties": {
 		"linkedServiceName": {
-			"referenceName": "AzureBlobStorage3",
+			"referenceName": "AzureBlobStorage4",
 			"type": "LinkedServiceReference"
 		},
 		"annotations": [],
@@ -10,7 +10,7 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobStorageLocation",
-				"fileName": "emlpoye.csv.csv",
+				"fileName": "department.csv",
 				"container": "input"
 			},
 			"columnDelimiter": ",",
@@ -18,23 +18,6 @@
 			"firstRowAsHeader": true,
 			"quoteChar": "\""
 		},
-		"schema": [
-			{
-				"name": "empid",
-				"type": "String"
-			},
-			{
-				"name": "name",
-				"type": "String"
-			},
-			{
-				"name": "country",
-				"type": "String"
-			},
-			{
-				"name": "department",
-				"type": "String"
-			}
-		]
+		"schema": []
 	}
 }
