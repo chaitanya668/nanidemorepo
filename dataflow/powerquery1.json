@@ -1,0 +1,20 @@
+{
+	"name": "powerquery1",
+	"properties": {
+		"type": "WranglingDataFlow",
+		"typeProperties": {
+			"sources": [
+				{
+					"name": "employeedataset",
+					"script": "source(allowSchemaDrift: true,\n\tvalidateSchema: false,\n\tignoreNoFilesFound: false) ~> employeedataset",
+					"dataset": {
+						"referenceName": "employeedataset",
+						"type": "DatasetReference"
+					}
+				}
+			],
+			"script": "section Section1;\r\nshared employeedataset = let AdfDoc = AzureStorage.BlobContents(\"https://chowdary.blob.core.windows.net/input/emlpoye.csv.csv\"),Csv = Csv.Document(AdfDoc, [Delimiter = \",\", Encoding = TextEncoding.Utf8, QuoteStyle = QuoteStyle.Csv]), PromotedHeaders = Table.PromoteHeaders(Csv, [PromoteAllScalars = true]) in  PromotedHeaders;\r\nshared UserQuery = let Source = #\"employeedataset\",\r\n  #\"Removed columns\" = Table.RemoveColumns(Source, {\"department\"}) in #\"Removed columns\";\r\n",
+			"documentLocale": "en-us"
+		}
+	}
+}
